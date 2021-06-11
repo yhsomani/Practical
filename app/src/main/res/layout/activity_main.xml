@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Animation Effects"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_margin="10dp"
+        android:src="@drawable/aarti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:onClick="zoom"
+                    android:text="zoom"
+                    app:layout_constraintBottom_toBottomOf="@+id/button5"
+                    app:layout_constraintStart_toEndOf="@+id/button5"
+                    app:layout_constraintTop_toTopOf="@+id/button5" />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:onClick="clockwise"
+                    android:text="clockwise"
+                    app:layout_constraintBottom_toBottomOf="@+id/button6"
+                    app:layout_constraintStart_toEndOf="@+id/button6"
+                    app:layout_constraintTop_toTopOf="@+id/button6" />
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/button2"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:onClick="fade"
+                    android:text="fade"
+                    app:layout_constraintBottom_toBottomOf="@+id/button2"
+                    app:layout_constraintStart_toEndOf="@+id/button2"
+                    app:layout_constraintTop_toTopOf="@+id/button2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:onClick="blink"
+                    android:text="blink"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button2"
+                    android:layout_alignLeft="@+id/button2"
+                    android:layout_alignRight="@+id/button2"
+                    android:layout_margin="10dp"
+                    android:onClick="move"
+                    android:text="move"
+                    app:layout_constraintBottom_toBottomOf="@+id/button4"
+                    app:layout_constraintStart_toEndOf="@+id/button4"
+                    app:layout_constraintTop_toTopOf="@+id/button4" />
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button3"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@+id/button5"
+                    android:onClick="slide"
+                    android:text="slide"
+                    app:layout_constraintEnd_toEndOf="@+id/button4"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/button4" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
